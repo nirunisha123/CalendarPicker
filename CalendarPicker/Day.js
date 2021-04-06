@@ -146,12 +146,12 @@ export default function Day(props) {
         // Apply style for start date
         if (isThisDaySameAsSelectedStart) {
           computedSelectedDayStyle = [styles.startDayWrapper, selectedRangeStyle, selectedRangeStartStyle];
-          selectedDayTextStyle = [styles.selectedDayLabel, propSelectedDayTextStyle, selectedRangeStartTextStyle];
+          selectedDayTextStyle = [styles.selectedDayLabel, propSelectedDayTextStyle, selectedRangeStartTextStyle,{color:'#ffffff'}];
         }
         // Apply style for end date
         if (isThisDaySameAsSelectedEnd) {
           computedSelectedDayStyle = [styles.endDayWrapper, selectedRangeStyle, selectedRangeEndStyle];
-          selectedDayTextStyle = [styles.selectedDayLabel, propSelectedDayTextStyle, selectedRangeEndTextStyle];
+          selectedDayTextStyle = [styles.selectedDayLabel, propSelectedDayTextStyle, selectedRangeEndTextStyle,{color:'#ffffff'}];
         }
         // Apply style if start date is the same as end date
         if (isThisDaySameAsSelectedEnd &&
@@ -173,7 +173,7 @@ export default function Day(props) {
           isThisDaySameAsSelectedStart)
       {
         computedSelectedDayStyle = [styles.startDayWrapper, selectedRangeStyle, selectedRangeStartStyle];
-        selectedDayTextStyle = [styles.selectedDayLabel, propSelectedDayTextStyle, selectedRangeStartTextStyle];
+        selectedDayTextStyle = [styles.selectedDayLabel, propSelectedDayTextStyle, selectedRangeStartTextStyle,{color:'#ffffff'}];
         // Override out of range start day text style when minRangeDuration = 1.
         // This allows selected start date's text to be styled by selectedRangeStartTextStyle
         // even when it's below minRangeDuration.
