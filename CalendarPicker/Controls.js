@@ -5,6 +5,7 @@ import {
   Text,
 } from 'react-native';
 import PropTypes from 'prop-types';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Controls(props) {
   const {
@@ -23,11 +24,9 @@ export default function Controls(props) {
       disabled={disabled}
       hitSlop={{ top: 20, bottom: 20, left: 40, right: 40 }}
     >
-      <View style={{opacity: disabled ? 0 : 1}}>
+     <View style={{opacity: disabled ? 0.4 : 1}}>
         { component ||
-          <Text style={[textStyles]}>
-            { label }
-          </Text>
+          <Icon name={label} color="#8c7bd1" />
         }
       </View>
     </TouchableOpacity>
