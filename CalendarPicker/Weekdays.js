@@ -37,7 +37,7 @@ export default function Weekdays(props) {
         }
         return (
           <View style={customDayOfWeekStyles.style} key={key}>
-            <Text style={dayOfWeekTextStyle}>
+             <Text style={[dayOfWeekTextStyle,{fontFamily:'Raleway-Bold',fontSize:16,color:'#afbace'}]}>
               {day}
             </Text>
           </View>
